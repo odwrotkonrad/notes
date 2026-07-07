@@ -1,6 +1,6 @@
 # notes
 
-Shared user-agent collaboration space, private
+Shared user-agent collaboration space
 
 @assets/docs-agents/purpose.md
 

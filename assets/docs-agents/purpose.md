@@ -3,7 +3,7 @@
 
 ## What It Is
 
-Shared user-agent collaboration space: private, versioned markdown notes carrying context, decisions, plans, open threads across sessions and repos.
+Shared user-agent collaboration space: versioned markdown notes carrying context, decisions, plans, open threads across sessions and repos.
 
 ## Why It Exists
 
@@ -14,7 +14,6 @@ Agent sessions are ephemeral. User and agents need one durable place to read and
 - Persist cross-session context: decisions, plans, open threads.
 - Let user and agents co-author the same notes.
 - Keep raw user notes untouched by agents.
-- Keep private material out of public repos.
 
 ## How To Use
 
