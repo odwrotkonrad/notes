@@ -6,15 +6,12 @@ workflow:
 stages:
   - validate
 
+variables:
+  CI_IMAGE: registry.gitlab.com/konradodwrot/infra/ci-images/ci-linux:bookworm
+
 validate-pre-commit-all:
   stage: validate
-  image: golang:1.26-bookworm
-  before_script:
-    - apt-get update && apt-get install -y --no-install-recommends clang make zsh
-    - go install gitlab.com/konradodwrot/go/che@latest
-    - go install github.com/evilmartians/lefthook@latest
-    - mkdir -p ~/.config/lefthook
-    - '[ -f ~/.config/lefthook/lefthook.yml ] || printf "min_version: 2.1.9\n" > ~/.config/lefthook/lefthook.yml'
+  image: $CI_IMAGE
   script:
     - make run-repo-ci-precommit-all
     - git diff --exit-code HEAD
