@@ -17,9 +17,13 @@ Agent sessions are ephemeral. User and agents need one durable place to read and
 
 - Persist cross-session context: decisions, plans, open threads.
 - Let user and agents co-author the same notes.
+- Keep raw user notes untouched by agents.
 - Keep private material out of public repos.
 
 ### How To Use
+
+- `user/`: raw user-authored notes. Agents read, never write.
+- `agent/`: agent-authored notes. To touch a user note, an agent copies it from `user/` to `agent/` and edits the copy.
 
 Read relevant notes when a session starts, write back what the next session needs. Plain markdown, topic files and dirs as they emerge.
 
