@@ -12,8 +12,6 @@ variables:
 validate-pre-commit-all:
   stage: validate
   image: $CI_IMAGE
-  variables:
-    CLICOLOR: "0"
   script:
     - make run-repo-ci-precommit-all
     - git diff --exit-code HEAD
