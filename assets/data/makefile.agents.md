@@ -5,6 +5,10 @@
 
 `render-templates` render *.repo.tpl onto the repo (makefile.agents.md, repo-structure.md, CLAUDE.md, AGENTS.md, README.md)
 
+### Notes:
+
+`init-note` initialize today's dated note in current/user from the template, archive old days
+
 ### CI:
 
 `run-repo-ci-prepare-hooks` install lefthook git hooks
