@@ -4,7 +4,7 @@ SHELL := zsh
 .SHELLFLAGS := -c
 
 WRAPPERS :=
-COMMANDS := render-templates run-repo-ci-prepare-hooks run-repo-ci-precommit-all
+COMMANDS := render-templates init-note run-repo-ci-prepare-hooks run-repo-ci-precommit-all
 
 .PHONY: $(WRAPPERS) $(COMMANDS)
 
@@ -13,6 +13,13 @@ COMMANDS := render-templates run-repo-ci-prepare-hooks run-repo-ci-precommit-all
 render-templates:
 	@che render-templates --repo
 ##[<] Docs
+
+##[>] Notes [genai-include]
+#[what] initialize today's dated note in current/user from the template, archive old days
+init-note:
+	@ruby scripts/init_note.rb
+
+##[<] Notes
 
 ##[>] CI [genai-include]
 #[what] install lefthook git hooks
